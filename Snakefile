@@ -3,7 +3,9 @@ sample_links = {"ERR458493": "https://osf.io/5daup/download",
                 "ERR458495": "https://osf.io/2wvn3/download",
                 "ERR458500": "https://osf.io/xju4a/download",
                 "ERR458501": "https://osf.io/nmqe6/download",
-                "ERR458502": "https://osf.io/qfsze/download"}
+                "ERR458502": "https://osf.io/qfsze/download",
+                "ERR458496": "https://osf.io/tzagu/download",
+                "ERR458503": "https://osf.io/px7sf/download"}
 
 # the sample names are dictionary keys in sample_links. extract them to a list we can use below
 SAMPLES=sample_links.keys()
