@@ -226,7 +226,7 @@ as our input counts. Instead, it can be helpful to sort and filter by adjusted
 p value or log2 Fold Change:
 
 ```{r}
-res_sig <- subset(res, padj<.05)
+res_sig <- subset(res, padj<0.1)
 res_lfc <- subset(res_sig, abs(log2FoldChange) > 1) 
 ```
 
@@ -310,7 +310,7 @@ sample_dists <- assay(vsd) %>%
 ```
 
 ```{r, eval = F}
-head(sample_dists)
+head(sample_dists, n=8)
 ```
 
 ```{r, echo = F}
@@ -325,7 +325,7 @@ mds <- cbind(mdsData, as.data.frame(colData(vsd))) # combine with sample data
 ```
 
 ```{r, eval = F}
-head(mds)
+head(mds, n=8)
 ```
 
 ```{r, echo = F}
@@ -377,8 +377,9 @@ annot_col <- samples %>%
 ```
 
 ```{r, eval = F}
-head(annot_col)
+head(annot_col, n=8)
 ```
+
 
 ```{r, echo = F}
 kableExtra::kable(head(annot_col)) %>%
